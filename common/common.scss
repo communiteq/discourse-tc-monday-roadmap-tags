@@ -1,0 +1,91 @@
+/* Hide the special tags from the actual tag list in the topic view */
+
+table.topic-list .link-bottom-line {
+    a.discourse-tag[data-tag-name="not-on-roadmap"],
+    a.discourse-tag[data-tag-name="not-planned"],
+    a.discourse-tag[data-tag-name="planned"],
+    a.discourse-tag[data-tag-name="released"] {
+      display: none;
+    }    
+}
+
+/* On the roadmap status line, don't show the regular tags, only the special ones. 
+   - remove the border
+   - add colors
+   - some of them get a special text, some of them are only capitalized 
+*/
+
+table.topic-list .roadmap-status-line {
+    a.discourse-tag {
+        display: none;
+    }
+}
+
+.topic-header-extra, 
+table.topic-list .roadmap-status-line {
+    a.discourse-tag[data-tag-name="not-on-roadmap"],
+    a.discourse-tag[data-tag-name="not-planned"],
+    a.discourse-tag[data-tag-name="planned"],
+    a.discourse-tag[data-tag-name="released"] {
+      display: block;
+      border: none;
+      padding-left: 0px !important;
+      padding-top: 3px !important;
+      font-size: 12px !important;
+      font-weight: 500;
+      margin-top: 3px;
+    } 
+    
+    a.discourse-tag[data-tag-name="not-on-roadmap"] {
+        color: #fb275d !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    a.discourse-tag[data-tag-name="not-on-roadmap"]::before {
+        content: 'Not on the Roadmap';
+        visibility: visible;
+    }
+    
+    a.discourse-tag[data-tag-name="not-planned"] {
+        color: #caa100 !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    a.discourse-tag[data-tag-name="not-planned"]::before {
+        content: 'Not immediately planned';
+        visibility: visible;
+    }
+    
+    a.discourse-tag[data-tag-name="planned"] {
+        color: #00854d !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    a.discourse-tag[data-tag-name="planned"]::before {
+        content: 'Planned';
+        visibility: visible;
+    }
+    
+    a.discourse-tag[data-tag-name="released"] {
+        color: #00cc6c !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    a.discourse-tag[data-tag-name="released"]::before {
+        content: 'Released';
+        visibility: visible;
+    }
+}
+
+/* Hide the special tags from the category filter dropdown */
+
+.navigation-container ul.select-kit-collection:first-of-type,
+.category-navigation ul.select-kit-collection:first-of-type {
+    li.tag-row[data-name="not-on-roadmap"],
+    li.tag-row[data-name="not-planned"],
+    li.tag-row[data-name="planned"],
+    li.tag-row[data-name="released"],
+    {
+        display: none;
+    }
+}
