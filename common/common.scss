@@ -15,14 +15,16 @@ table.topic-list .link-bottom-line {
    - some of them get a special text, some of them are only capitalized 
 */
 
-table.topic-list .roadmap-status-line {
+table.topic-list .roadmap-status-line,
+.navigation-topics .topics-container .topic-list tbody .topic-list-item .main-link .link-top-line {
     a.discourse-tag {
         display: none;
     }
 }
 
 .topic-header-extra, 
-table.topic-list .roadmap-status-line {
+table.topic-list .roadmap-status-line,
+.navigation-topics .topics-container .topic-list tbody .topic-list-item .main-link .link-top-line {
     a.discourse-tag[data-tag-name="not-on-roadmap"],
     a.discourse-tag[data-tag-name="not-planned"],
     a.discourse-tag[data-tag-name="planned"],
@@ -60,6 +62,7 @@ table.topic-list .roadmap-status-line {
         color: #00854d !important;
         visibility: hidden;
         pointer-events: none;
+        width: 60px; /* otherwise the text is somehow floating a bit from the side on the home page */
     }
     a.discourse-tag[data-tag-name="planned"]::before {
         content: 'Planned';
@@ -70,6 +73,7 @@ table.topic-list .roadmap-status-line {
         color: #00cc6c !important;
         visibility: hidden;
         pointer-events: none;
+        width: 60px; /* otherwise the text is somehow floating a bit from the side on the home page */
     }
     a.discourse-tag[data-tag-name="released"]::before {
         content: 'Released';
