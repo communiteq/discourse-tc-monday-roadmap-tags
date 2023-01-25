@@ -44,7 +44,7 @@ table.topic-list .roadmap-status-line,
         pointer-events: none;
     }
     a.discourse-tag[data-tag-name="not-on-roadmap"]::before {
-        content: 'Not on the Roadmap';
+        content: 'Currently not on the roadmap ';
         visibility: visible;
     }
     
@@ -54,7 +54,7 @@ table.topic-list .roadmap-status-line,
         pointer-events: none;
     }
     a.discourse-tag[data-tag-name="not-planned"]::before {
-        content: 'Not immediately planned';
+        content: 'Under consideration';
         visibility: visible;
     }
     
@@ -62,10 +62,9 @@ table.topic-list .roadmap-status-line,
         color: #00854d !important;
         visibility: hidden;
         pointer-events: none;
-        width: 60px; /* otherwise the text is somehow floating a bit from the side on the home page */
     }
     a.discourse-tag[data-tag-name="planned"]::before {
-        content: 'Planned';
+        content: 'On the roadmap';
         visibility: visible;
     }
     
