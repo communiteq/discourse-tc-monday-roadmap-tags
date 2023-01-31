@@ -1,9 +1,9 @@
 /* Hide the special tags from the actual tag list in the topic view */
 
 table.topic-list .link-bottom-line {
-    a.discourse-tag[data-tag-name="not-on-the-roadmap"],
+    a.discourse-tag[data-tag-name="not-on-roadmap"],
     a.discourse-tag[data-tag-name="under-consideration"],
-    a.discourse-tag[data-tag-name="on-the-roadmap"],
+    a.discourse-tag[data-tag-name="on-roadmap"],
     a.discourse-tag[data-tag-name="released"] {
       display: none;
     }    
@@ -25,9 +25,9 @@ table.topic-list .roadmap-status-line,
 .topic-header-extra, 
 table.topic-list .roadmap-status-line,
 .navigation-topics .topics-container .topic-list tbody .topic-list-item .main-link .link-top-line {
-    a.discourse-tag[data-tag-name="not-on-the-roadmap"],
+    a.discourse-tag[data-tag-name="not-on-roadmap"],
     a.discourse-tag[data-tag-name="under-consideration"],
-    a.discourse-tag[data-tag-name="on-the-roadmap"],
+    a.discourse-tag[data-tag-name="on-roadmap"],
     a.discourse-tag[data-tag-name="released"] {
       display: block;
       border: none;
@@ -38,13 +38,13 @@ table.topic-list .roadmap-status-line,
       margin-top: 3px;
     } 
     
-    a.discourse-tag[data-tag-name="not-on-the-roadmap"] {
+    a.discourse-tag[data-tag-name="not-on-roadmap"] {
         color: #fb275d !important;
         visibility: hidden;
         pointer-events: none;
     }
-    a.discourse-tag[data-tag-name="not-on-the-roadmap"]::before {
-        content: 'Currently not on the roadmap ';
+    a.discourse-tag[data-tag-name="not-on-roadmap"]::before {
+        content: 'Currently not on roadmap';
         visibility: visible;
     }
     
@@ -58,13 +58,13 @@ table.topic-list .roadmap-status-line,
         visibility: visible;
     }
     
-    a.discourse-tag[data-tag-name="on-the-roadmap"] {
+    a.discourse-tag[data-tag-name="on-roadmap"] {
         color: #00854d !important;
         visibility: hidden;
         pointer-events: none;
     }
-    a.discourse-tag[data-tag-name="on-the-roadmap"]::before {
-        content: 'On the roadmap';
+    a.discourse-tag[data-tag-name="on-roadmap"]::before {
+        content: 'On roadmap';
         visibility: visible;
     }
     
@@ -84,9 +84,9 @@ table.topic-list .roadmap-status-line,
 
 .navigation-container ul.select-kit-collection:first-of-type,
 .category-navigation ul.select-kit-collection:first-of-type {
-    li.tag-row[data-name="not-on-the-roadmap"],
+    li.tag-row[data-name="not-on-roadmap"],
     li.tag-row[data-name="under-consideration"],
-    li.tag-row[data-name="on-the-roadmap"],
+    li.tag-row[data-name="on-roadmap"],
     li.tag-row[data-name="released"],
     {
         display: none;
