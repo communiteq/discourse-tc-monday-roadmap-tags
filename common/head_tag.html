@@ -1,7 +1,7 @@
 <script type='text/x-handlebars' data-template-name='/connectors/topic-list-after-title/roadmap-tags.hbr'>
+  {{#if context.topic.tags}}
   <div class="roadmap-status-line">
-    {{#if context.topic.tags}}
       {{discourse-tags context.topic mode="list"}}
-    {{/if}}
   </div>
+  {{/if}}
 </script>

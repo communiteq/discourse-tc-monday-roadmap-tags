@@ -30,14 +30,12 @@ table.topic-list .roadmap-status-line,
     a.discourse-tag[data-tag-name="on-roadmap"],
     a.discourse-tag[data-tag-name="released"] {
       display: block;
-      border: none;
       padding-left: 0px !important;
       padding-top: 3px !important;
-      font-size: 12px !important;
+      font-size: 14px !important;
       font-weight: 500;
       margin-top: 3px;
     } 
-    
     a.discourse-tag[data-tag-name="not-on-roadmap"] {
         color: #fb275d !important;
         visibility: hidden;
@@ -80,6 +78,11 @@ table.topic-list .roadmap-status-line,
     }
 }
 
+/* If the roadmap status line does not contain one of our beloved tags, hide it. It takes up space otherwise. */
+.roadmap-status-line:not(:has(a[data-tag-name="released"], a[data-tag-name="not-on-roadmap"], a[data-tag-name="on-roadmap"], a[data-tag-name="under-consideration"])) {
+    display: none;
+}
+
 /* Hide the special tags from the category filter dropdown */
 
 .navigation-container ul.select-kit-collection:first-of-type,
@@ -91,4 +94,10 @@ table.topic-list .roadmap-status-line,
     {
         display: none;
     }
+}
+
+/* The standard Monday theme sets a padding top which pushes the lock for a closed topic down, and
+   that shifts our tag to the right. Reset it. */
+body .topics-container .topic-list tbody .topic-list-item .main-link .link-top-line .topic-statuses {
+    padding-top: 0px !important;
 }
