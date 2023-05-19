@@ -3,8 +3,8 @@ These tags are not part of the theme component and should be added manually, at 
 
 The names of the tags should be:
 * released
-* planned
-* not-planned
-* not-on-roadmap
+* on-roadmap (i.e. planned)
+* under-consideration (i.e. not planned)
+* currently-not-on-roadmap (i.e. won't implement)
 
 These four tags are put on a separate line, both in the topic lists but also in the topic view, and are expanded to a text in a certain color.
