@@ -70,7 +70,7 @@ table.topic-list .roadmap-status-line,
         color: #00cc6c !important;
         visibility: hidden;
         pointer-events: none;
-        width: 70px; /* otherwise the text is somehow floating a bit from the side on the home page */
+        width: 80px; /* otherwise the text is somehow floating a bit from the side on the home page */
     }
     a.discourse-tag[data-tag-name="released"]::before {
         content: 'Released';
