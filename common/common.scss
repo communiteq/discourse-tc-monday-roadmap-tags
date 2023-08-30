@@ -1,7 +1,9 @@
 /* Hide the special tags from the actual tag list in the topic view */
 
+table.topic-list .topic-item-stats__category-tags .discourse-tags, /* mobile */
 table.topic-list .link-bottom-line {
     a.discourse-tag[data-tag-name="currently-not-on-roadmap"],
+    a.discourse-tag[data-tag-name="long-term-roadmap"],
     a.discourse-tag[data-tag-name="under-consideration"],
     a.discourse-tag[data-tag-name="on-roadmap"],
     a.discourse-tag[data-tag-name="released"] {
@@ -26,6 +28,7 @@ table.topic-list .roadmap-status-line,
 table.topic-list .roadmap-status-line,
 .navigation-topics .topics-container .topic-list tbody .topic-list-item .main-link .link-top-line {
     a.discourse-tag[data-tag-name="currently-not-on-roadmap"],
+    a.discourse-tag[data-tag-name="long-term-roadmap"],
     a.discourse-tag[data-tag-name="under-consideration"],
     a.discourse-tag[data-tag-name="on-roadmap"],
     a.discourse-tag[data-tag-name="released"] {
@@ -45,7 +48,15 @@ table.topic-list .roadmap-status-line,
         content: 'Currently not on roadmap';
         visibility: visible;
     }
-    
+    a.discourse-tag[data-tag-name="long-term-roadmap"] {
+        color: #6161ff !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    a.discourse-tag[data-tag-name="long-term-roadmap"]::before {
+        content: 'Long-term roadmap';
+        visibility: visible;
+    }    
     a.discourse-tag[data-tag-name="under-consideration"] {
         color: #caa100 !important;
         visibility: hidden;
@@ -79,7 +90,7 @@ table.topic-list .roadmap-status-line,
 }
 
 /* If the roadmap status line does not contain one of our beloved tags, hide it. It takes up space otherwise. */
-.roadmap-status-line:not(:has(a[data-tag-name="released"], a[data-tag-name="currently-not-on-roadmap"], a[data-tag-name="on-roadmap"], a[data-tag-name="under-consideration"])) {
+.roadmap-status-line:not(:has(a[data-tag-name="released"], a[data-tag-name="currently-not-on-roadmap"], a[data-tag-name="long-term-roadmap"],a[data-tag-name="on-roadmap"], a[data-tag-name="under-consideration"])) {
     display: none;
 }
 
@@ -88,6 +99,7 @@ table.topic-list .roadmap-status-line,
 .navigation-container ul.select-kit-collection:first-of-type,
 .category-navigation ul.select-kit-collection:first-of-type {
     li.tag-row[data-name="currently-not-on-roadmap"],
+    li.tag-row[data-name="long-term-roadmap"],
     li.tag-row[data-name="under-consideration"],
     li.tag-row[data-name="on-roadmap"],
     li.tag-row[data-name="released"],
